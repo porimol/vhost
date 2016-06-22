@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name = "VirtualHost",
-    version = "1.1",
+    version = "1.0",
     py_modules = "vhost",
     install_requires = [
         'Click'
