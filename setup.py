@@ -2,11 +2,12 @@ from setuptools import setup
 
 setup(
     name = "VirtualHost",
-    version = "1.0",
-    py_modules = "vhost",
+    version = "0.0.1",
+    py_modules = "VirtualHost",
     install_requires = [
         'Click'
     ],
+    packages=['VirtualHost'],
     entry_points = '''
         [console_scripts]
         vhost=vhost.vhost:main
@@ -17,5 +18,4 @@ setup(
     license = "MIT",
     keywords = ["vhost", "virtual host"],
     url = "https://github.com/porimol/vhost",
-    download_url = 'https://github.com/porimol/vhost/archive/master.zip',
 )
