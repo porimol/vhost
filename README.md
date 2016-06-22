@@ -25,4 +25,4 @@ Inspired By
 ---------
 
 [vhost](https://github.com/nahid/vhost) open source project.
-[Author :- Nahid Bin Azhar](https://github.com/nahid/vhost)
+[Author :- Nahid Bin Azhar](https://github.com/nahid)
