@@ -79,7 +79,10 @@ celerybeat-schedule
 .env
 
 # virtualenv
+<<<<<<< HEAD
 VirtualHost.egg-info/
+=======
+>>>>>>> cd128807820627d5cc808770b6d57bc9f3a79c73
 venv/
 ENV/
 
@@ -88,8 +91,11 @@ ENV/
 
 # Rope project settings
 .ropeproject
+<<<<<<< HEAD
 
 #IDE
 .idea
 
 setup.cfg
+=======
+>>>>>>> cd128807820627d5cc808770b6d57bc9f3a79c73
