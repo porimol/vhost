@@ -42,7 +42,7 @@ def main(domain, path):
         click.echo('%s virtual host was created.' % vhost_file)
 
         # Enabled this site
-        os.system("sudo a2ensite "+ domain_config)
+        os.system("sudo a2ensite "+ domain_config +" -y")
 
         # Apache2 reload
         os.system("sudo service apache2 restart -y")

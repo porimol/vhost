@@ -10,7 +10,7 @@ setup(
     packages=['VirtualHost'],
     entry_points = '''
         [console_scripts]
-        vhost=vhost.vhost:main
+        vhost=VirtualHost.vhost:main
     ''',
     author = "P.C ROY",
     author_email = "p.c_roy@yahoo.com",
