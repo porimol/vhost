@@ -30,7 +30,7 @@ For help run `vhost --help`
 Credit
 ---------
 
-[Plabon](https://www.facebook.com/obiPlabon)
+[Plabon](https://github.com/obiPlabon)
 
 
 Inspired By
