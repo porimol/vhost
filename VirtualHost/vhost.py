@@ -16,7 +16,7 @@ def main(domain, path):
         # create the projec path
         os.makedirs( path +"/"+ domain, 0755 )
         # show the success message
-        click.echo('%s directory was created.' % domain)
+        click.secho('%s directory was created.' % domain,fg='green')
         # create virtual host configuration file
         os.system("touch "+ vhost_file)
         # virtual configuration file permission
@@ -39,7 +39,7 @@ def main(domain, path):
             f.write("\n127.0.0.1 \t "+ domain)
 
         # virtual host created message
-        click.echo('%s virtual host was created.' % vhost_file)
+        click.secho('%s virtual host was created.' % vhost_file,fg='green')
 
         # Enabled this site
         os.system("a2ensite "+ domain_config +" -y")
@@ -47,6 +47,6 @@ def main(domain, path):
         # Apache2 reload
         os.system("service apache2 restart -y")
         # Success message
-        click.echo("Congratulation, %s successfully created!" % domain)
+        click.secho("Congratulation, %s successfully created!" % domain,fg='green')
     else:
-        click.echo('The directory and virtual host was created!')
+        click.secho('The directory and virtual host was created!',fg='green')
