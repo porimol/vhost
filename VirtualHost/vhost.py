@@ -14,7 +14,7 @@ def main(domain, path):
     # if already the project directory is created then exists
     if not os.path.exists(project_path):
         # create the projec path
-        os.makedirs( path +"/"+ domain, 0755 )
+        os.makedirs( path +"/"+ domain, 0o755 )
         # show the success message
         click.secho('%s directory was created.' % domain,fg='green')
         # create virtual host configuration file
