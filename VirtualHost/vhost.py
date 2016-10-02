@@ -18,9 +18,9 @@ def main(domain, path):
         # show the success message
         click.echo('%s directory was created.' % domain)
         # create virtual host configuration file
-        os.system("sudo touch "+ vhost_file)
+        os.system("touch "+ vhost_file)
         # virtual configuration file permission
-        os.system("sudo chmod 0777 "+ vhost_file)
+        os.system("chmod 0777 "+ vhost_file)
 
         # Virtual Hosts Configuration
         with open(vhost_file, "a+") as vfile:
@@ -33,7 +33,7 @@ def main(domain, path):
             vfile.write("</VirtualHost>")
 
         # Given 777 permission to the Virtual Hosts
-        os.system("sudo chmod -R 777 /etc/hosts")
+        os.system("chmod -R 777 /etc/hosts")
         # Virtual Hosts
         with open("/etc/hosts", "a+") as f:
             f.write("\n127.0.0.1 \t "+ domain)
@@ -42,10 +42,10 @@ def main(domain, path):
         click.echo('%s virtual host was created.' % vhost_file)
 
         # Enabled this site
-        os.system("sudo a2ensite "+ domain_config +" -y")
+        os.system("a2ensite "+ domain_config +" -y")
 
         # Apache2 reload
-        os.system("sudo service apache2 restart -y")
+        os.system("service apache2 restart -y")
         # Success message
         click.echo("Congratulation, %s successfully created!" % domain)
     else:
