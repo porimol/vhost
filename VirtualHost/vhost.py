@@ -25,7 +25,7 @@ def main(domain, path):
         # Virtual Hosts Configuration
         with open(vhost_file, "a+") as vfile:
             vfile.write("<VirtualHost *:80>\n")
-            vfile.write("\tServerAdmin email.example@com\n")
+            vfile.write("\tServerAdmin email@example.com\n")
             vfile.write("\tServerName "+ domain +"\n")
             vfile.write("\tServerAlias www."+ domain +"\n")
             vfile.write("\tDocumentRoot "+ project_path +"\n")
@@ -42,10 +42,10 @@ def main(domain, path):
         click.secho('%s virtual host was created.' % vhost_file,fg='green')
 
         # Enabled this site
-        os.system("a2ensite "+ domain_config +" -y")
+        os.system("a2ensite "+ domain_config)
 
         # Apache2 reload
-        os.system("service apache2 restart -y")
+        os.system("systemctl reload apache2")
         # Success message
         click.secho("Congratulation, %s successfully created!" % domain,fg='green')
     else:
